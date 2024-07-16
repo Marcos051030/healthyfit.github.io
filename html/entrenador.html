@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Trainers</title>
+  <!-- Aquí van tus enlaces a CSS, por ejemplo -->
+  <link rel="stylesheet" href="/style/trainer.css">
+</head>
+
+<body>
+  <section class="grid grid-cols-1 gap-6 p-4 md:grid-cols-2 lg:grid-cols-3 lg:p-6">
+    <div class="relative overflow-hidden transition-transform duration-300 ease-in-out rounded-lg shadow-lg group hover:shadow-xl hover:-translate-y-2">
+      <a href="#" class="absolute inset-0 z-10" prefetch="false">
+        <span class="sr-only">View Trainer</span>
+      </a>
+      <div class="relative h-64 overflow-hidden">
+        <img src="/placeholder1.png" alt="Trainer 1" width="500" height="400" class="object-cover w-full h-full" />
+      </div>
+      <div class="p-6 bg-background">
+        <div class="flex items-center justify-between">
+          <div>
+            <h3 class="text-xl font-bold">John Doe</h3>
+            <p class="text-sm text-muted-foreground">Personal Trainer</p>
+            <div class="flex items-center gap-2 text-sm text-muted-foreground">
+              <span><img src="/calendar-icon.png" alt="Calendar" class="h-4 w-4 inline-block" /></span>
+              <span>Age: 35</span>
+            </div>
+            <div class="flex items-center gap-2 text-sm text-muted-foreground">
+              <span><img src="/group-icon.png" alt="Group" class="h-4 w-4 inline-block" /></span>
+              <span>Male</span>
+            </div>
+            <div class="flex items-center gap-2 text-sm text-muted-foreground">
+              <span><img src="/locate-icon.png" alt="Location" class="h-4 w-4 inline-block" /></span>
+              <span>New York, NY</span>
+            </div>
+          </div>
+        </div>
+        <p class="mt-4 text-sm text-muted-foreground">
+          Certified personal trainer with 10+ years of experience. Specializes in strength training, weight loss, and
+          muscle building. Passionate about helping clients achieve their fitness goals through personalized training
+          and nutrition guidance.
+        </p>
+        <div class="mt-4">
+          <h4 class="text-lg font-semibold">Specialties:</h4>
+          <ul class="mt-2 space-y-2 text-sm">
+            <li>- Strength Training</li>
+            <li>- Weight Loss</li>
+            <li>- Muscle Building</li>
+            <li>- Nutrition Coaching</li>
+          </ul>
+        </div>
+        <div class="mt-4">
+          <h4 class="text-lg font-semibold">Packages:</h4>
+          <ul class="mt-2 space-y-2 text-sm">
+            <li>- Individual Sessions: $60/hour</li>
+            <li>- 10-Session Package: $500</li>
+          </ul>
+        </div>
+        <button class="mt-4 w-full">Contact</button>
+      </div>
+    </div>
+    <!-- Repetir para los otros entrenadores -->
+  </section>
+  
+</body>
+
+</html>

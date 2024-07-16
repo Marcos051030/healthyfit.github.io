@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reseñas y Recomendaciones</title>
+    <link rel="stylesheet" href="/style/reseña.css">
+  </head>
+  <body>
+    <body>
+  <div class="container">
+    <div class="sticky-header">
+      <div class="header flex justify-between items-center mb-6">
+        <h2 class="text-2xl font-bold">Reseñas y Recomendaciones de HealthyFit</h2>
+        <button class="bg-secondary text-secondary-foreground hover:bg-secondary/80 py-2 px-4 rounded" onclick="history.back()">Regresar</button>
+      </div>
+    </div>
+    <div class="bg-background text-foreground p-6">
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+        <div class="card bg-card text-card-foreground p-4 rounded-lg shadow">
+          <div class="flex items-center mb-2">
+            <img aria-hidden="true" alt="user-icon" src="https://openui.fly.dev/openui/48x48.svg?text=👤" class="user-image mr-2" />
+            <h3 class="font-semibold">Brighitte Samanta</h3>
+          </div>
+          <div class="flex items-center mb-2">
+            <span class="text-yellow-500">★★★★☆</span>
+          </div>
+          <p>¡Estoy encantada con este producto! Es fácil de usar y ha mejorado mucho mi vida diaria. Definitivamente lo recomendaría.</p>
+        </div>
+          <div class="card bg-card text-card-foreground p-4 rounded-lg shadow">
+            <div class="flex items-center mb-2">
+              <img aria-hidden="true" alt="user-icon" src="https://openui.fly.dev/openui/48x48.svg?text=👤" class="user-image mr-2" />
+              <h3 class="font-semibold">Makanaky</h3>
+            </div>
+            <div class="flex items-center mb-2">
+              <span class="text-yellow-500">★★★★★</span>
+            </div>
+            <p>Este producto es increíble. Ha simplificado mucho mi vida y me ha ahorrado un montón de tiempo. ¡Lo recomiendo encarecidamente!</p>
+          </div>
+          <div class="card bg-card text-card-foreground p-4 rounded-lg shadow">
+            <div class="flex items-center mb-2">
+              <img aria-hidden="true" alt="user-icon" src="https://openui.fly.dev/openui/48x48.svg?text=👤" class="user-image mr-2" />
+              <h3 class="font-semibold">Lana Rhoades</h3>
+            </div>
+            <div class="flex items-center mb-2">
+              <span class="text-yellow-500">★★★☆☆</span>
+            </div>
+            <p>Este producto es muy bueno, pero creo que todavía hay margen de mejora. Aun así, lo recomiendo a quienes buscan una solución práctica y eficiente.</p>
+          </div>
+          <div class="card bg-card text-card-foreground p-4 rounded-lg shadow">
+            <div class="flex items-center mb-2">
+              <img aria-hidden="true" alt="user-icon" src="https://openui.fly.dev/openui/48x48.svg?text=👤" class="user-image mr-2" />
+              <h3 class="font-semibold">Tushar Kesarwani</h3>
+            </div>
+            <div class="flex items-center mb-2">
+              <span class="text-yellow-500">★★★★★</span>
+            </div>
+            <p>Este producto ha sido una verdadera revelación para mí. Es fácil de usar, eficiente y me ha ayudado a mejorar significativamente mi productividad. Lo recomiendo sin duda a cualquiera que busque una solución efectiva.</p>
+          </div>
+          <div class="card bg-card text-card-foreground p-4 rounded-lg shadow">
+            <div class="flex items-center mb-2">
+              <img aria-hidden="true" alt="user-icon" src="https://openui.fly.dev/openui/48x48.svg?text=👤" class="user-image mr-2" />
+              <h3 class="font-semibold">Kusumita Jha</h3>
+            </div>
+            <div class="flex items-center mb-2">
+              <span class="text-yellow-500">★★★★☆</span>
+            </div>
+            <p>Estoy muy satisfecha con este producto. Es intuitivo, fácil de usar y me ha ayudado a organizar mi trabajo de manera más eficiente. Lo recomiendo a cualquiera que busque mejorar su productividad.</p>
+          </div>
+          <div class="card bg-card text-card-foreground p-4 rounded-lg shadow">
+            <div class="flex items-center mb-2">
+              <img aria-hidden="true" alt="user-icon" src="https://openui.fly.dev/openui/48x48.svg?text=👤" class="user-image mr-2" />
+              <h3 class="font-semibold">Kaira Banu</h3>
+            </div>
+            <div class="flex items-center mb-2">
+              <span class="text-yellow-500">★★★★★</span>
+            </div>
+            <p>Este producto ha sido un verdadero juego cambiante para mí. Es increíblemente útil y me ha ayudado a ahorrar mucho tiempo y esfuerzo. Lo recomiendo encarecidamente a cualquiera que busque una solución efectiva y eficiente.</p>
+          </div>
+        </div>
+        <div class="review-card flex flex-col items-center justify-center mt-6">
+          <textarea class="textarea-resena mb-4" rows="4" placeholder="Escribe tu reseña aquí..."></textarea>
+          <button class="button-resena" onclick="agregarResena()">Deja tu reseña</button>
+        </div>
+      </div>
+    </div>
+    <script>
+      function agregarResena() {
+        // Obtener el contenido de la textarea
+        var reseña = document.querySelector('.textarea-resena').value;
+        
+        // Validar si la reseña no está vacía
+        if (reseña.trim() !== '') {
+          // Crear un nuevo elemento de reseña
+          var nuevaResena = document.createElement('div');
+          nuevaResena.classList.add('card', 'bg-card', 'text-card-foreground', 'p-4', 'rounded-lg', 'shadow', 'mb-6');
+          
+          // Contenido de la reseña
+          nuevaResena.innerHTML = `
+            <div class="flex items-center mb-2">
+              <img aria-hidden="true" alt="user-icon" src="https://openui.fly.dev/openui/48x48.svg?text=👤" class="user-image mr-2" />
+              <h3 class="font-semibold">Usuario Anónimo</h3>
+            </div>
+            <div class="flex items-center mb-2">
+              <span class="text-yellow-500">★★★☆☆</span>
+            </div>
+            <p>${reseña}</p>
+          `;
+          
+          // Agregar la nueva reseña al inicio de la lista de reseñas
+          var listaReseñas = document.querySelector('.grid');
+          listaReseñas.prepend(nuevaResena);
+          
+          // Limpiar el contenido de la textarea después de agregar la reseña
+          document.querySelector('.textarea-resena').value = '';
+        } else {
+          // Mostrar mensaje de error si la textarea está vacía
+          alert('Por favor, escribe tu reseña antes de enviar.');
+        }
+      }
+    </script>
+  </body>
+</html>

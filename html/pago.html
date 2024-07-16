@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pago - online</title>
+    <link rel="stylesheet" href="/style/pago.css"> <!-- Asegúrate de enlazar tu hoja de estilos aquí -->
+</head>
+<body>
+    <div class="container">
+        <button class="btn-back" onclick="history.back()">Regresar</button>
+        <header class="header">
+    <div class="card w-full max-w-lg">
+        <div class="card-header">
+            <h1 class="card-title">HealthyFit Pago en linea</h1>
+            <p class="card-description">Complete su compra</p>
+        </div>
+        <div class="card-content space-y-6">
+            <div>
+                <label for="metodo-pago" class="label mb-2 block font-medium">
+                    Método de Pago
+                </label>
+                <div class="radio-group grid grid-cols-3 gap-4">
+                    <div>
+                        <input type="radio" id="tarjeta" name="metodo-pago" value="tarjeta" class="peer sr-only" checked>
+                        <label for="tarjeta" class="flex flex-col items-center justify-between rounded-md border-2 border-muted bg-popover p-4 hover:bg-accent hover:text-accent-foreground peer-checked:border-primary">
+                            <img src="/images/tarjeta.png" alt="Tarjeta" class="mb-3 h-6 w-6">
+                            Tarjeta
+                        </label>
+                    </div>
+                    <div>
+                        <input type="radio" id="transferencia-bancaria" name="metodo-pago" value="transferencia-bancaria" class="peer sr-only">
+                        <label for="transferencia-bancaria" class="flex flex-col items-center justify-between rounded-md border-2 border-muted bg-popover p-4 hover:bg-accent hover:text-accent-foreground peer-checked:border-primary">
+                            <img src="/images/transferencia.png" alt="Transferencia Bancaria" class="mb-3 h-6 w-6">
+                            Transferencia Bancaria
+                        </label>
+                    </div>
+                    <div>
+                        <input type="radio" id="paypal" name="metodo-pago" value="paypal" class="peer sr-only">
+                        <label for="paypal" class="flex flex-col items-center justify-between rounded-md border-2 border-muted bg-popover p-4 hover:bg-accent hover:text-accent-foreground peer-checked:border-primary">
+                            <img src="/images/paypal.png" alt="PayPal" class="mb-3 h-6 w-6">
+                            PayPal
+                        </label>
+                    </div>
+                </div>
+            </div>
+            <div class="grid gap-4">
+                <div>
+                    <label for="numero-tarjeta" class="label mb-2 block font-medium">
+                        Número de Tarjeta
+                    </label>
+                    <input type="text" id="numero-tarjeta" class="input" placeholder="0000 0000 0000 0000">
+                </div>
+                <div class="grid grid-cols-3 gap-4">
+                    <div>
+                        <label for="fecha-expiracion" class="label mb-2 block font-medium">
+                            Fecha de Expiración
+                        </label>
+                        <div class="grid grid-cols-2 gap-2">
+                            <select id="mes-expiracion" class="select">
+                                <option value="" disabled selected>MM</option>
+                                <option value="01">01</option>
+                                <option value="02">02</option>
+                                <option value="03">03</option>
+                                <option value="04">04</option>
+                                <option value="05">05</option>
+                                <option value="06">06</option>
+                                <option value="07">07</option>
+                                <option value="08">08</option>
+                                <option value="09">09</option>
+                                <option value="10">10</option>
+                                <option value="11">11</option>
+                                <option value="12">12</option>
+                            </select>
+                            <select id="ano-expiracion" class="select">
+                                <option value="" disabled selected>AAAA</option>
+                                <option value="2023">2023</option>
+                                <option value="2024">2024</option>
+                                <option value="2025">2025</option>
+                                <option value="2026">2026</option>
+                                <option value="2027">2027</option>
+                                <option value="2028">2028</option>
+                                <option value="2029">2029</option>
+                                <option value="2030">2030</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div>
+                        <label for="cvc" class="label mb-2 block font-medium">
+                            CVC
+                        </label>
+                        <input type="text" id="cvc" class="input" placeholder="123">
+                    </div>
+                </div>
+            </div>
+            <div>
+                <label for="direccion-facturacion" class="label mb-2 block font-medium">
+                    Dirección de Facturación
+                </label>
+                <textarea id="direccion-facturacion" class="textarea min-h-[120px]" placeholder="Ingrese su dirección de facturación"></textarea>
+            </div>
+            <div class="flex items-center">
+                <input type="checkbox" id="terminos" class="checkbox mr-2">
+                <label for="terminos">He leído y acepto los
+                    <a href="#" class="text-blue-600 underline">términos y condiciones
+                    </a>
+                </label>
+            </div>
+            <br>
+            <button class="button w-full">Realizar Pedido</button>
+        </div>
+    </div>
+    <script src="/javascript/pago.js"></script>
+</body>
+</html>

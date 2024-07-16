@@ -1,0 +1,225 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+    font-size: 18px;
+}
+body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+.header {
+    height: 80px;
+    width: 70%;
+    background-color: rgb(224, 24, 24);
+    border-radius: 3px;
+    margin: 30px 0px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 15px;
+}
+.header .logo {
+    font-size: 30px;
+    font-weight: bold;
+    color: white;
+}
+.cart {
+    display: flex;
+    background-color: white;
+    justify-content: space-between;
+    align-items: center;
+    padding: 7px 10px;
+    border-radius: 3px;
+    width: 80px;
+}
+.fa-solid {
+    color: rgb(218, 32, 32);
+}
+.cart p {
+    height: 22px;
+    width: 22px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 22px;
+    background-color: rgb(218, 32, 32);
+    color: white;
+}
+.container {
+    display: flex;
+    width: 70%;
+    margin-bottom: 30px;
+}
+#sidebar {
+    width: 80%;
+}
+#root {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 20px;
+}
+#searchInput {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid rgb(218, 32, 32);
+    border-radius: 5px;
+}
+.sidebar {
+    width: 30%;
+    border-radius: 5px;
+    background-color: #eee;
+    margin-left: 20px;
+    padding: 15px;
+    text-align: center;
+}
+.head {
+    background-color: rgb(218, 32, 32);
+    border-radius: 3px;
+    height: 40px;
+    padding: 10px;
+    margin-bottom: 20px;
+    color: white;
+    display: flex;
+    align-items: center;
+}
+.foot {
+    display: flex;
+    justify-content: space-between;
+    margin: 20px 0px;
+    padding: 10px 0px;
+    border-top: 1px solid #333;
+    flex-direction: column;
+    align-items: center;
+}
+.box {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    border: 1px solid rgb(218, 32, 32);
+    border-radius: 5px;
+    padding: 15px;
+}
+.img-box {
+    width: 100%;
+    height: 180px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.images {
+    max-width: 90%;
+    max-height: 90%;
+    object-fit: cover;
+    object-position: center;
+}
+.bottom {
+    margin-top: 20px;
+    width: 100%;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    height: 110px;
+}
+h2 {
+    font-size: 20px;
+    color: red;
+}
+button {
+    width: 60%;
+    position: relative;
+    border: none;
+    border-radius: 5px;
+    background-color: rgb(218, 32, 32);
+    padding: 7px 25px;
+    cursor: pointer;
+    color: white;
+}
+button:hover {
+    background-color: #333;
+}
+.cart-item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px;
+    background-color: white;
+    border-bottom: 1px solid #aaa;
+    border-radius: 3px;
+    margin: 10px 10px;
+}
+.row-img {
+    width: 50px;
+    height: 50px;
+    border-radius: 50px;
+    border: 1px solid rgb(218, 32, 32);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.rowimg {
+    max-width: 43px;
+    max-height: 43px;
+    border-radius: 50%;
+}
+.fa-trash:hover {
+    cursor: pointer;
+    color: #333;
+}
+#buyBtn {
+    margin-top: 20px;
+}
+
+#orderbtn {
+    margin-top: 20px;
+    padding: 0.5rem 1rem;
+    margin: 20px;
+
+}
+#sidebar {
+    width: 80%; /* Ajusta según sea necesario */
+    margin: 0 auto; /* Centrar el contenedor */
+    text-align: center; /* Alinear contenido al centro */
+    display: flex; /* Utilizar flexbox */
+    flex-wrap: wrap; /* Permitir que los elementos se envuelvan en múltiples líneas */
+    justify-content: center; /* Centrar elementos horizontalmente */
+}
+
+#sidebar button {
+    width: calc(33.33% - 10px); /* Ancho para que haya 3 columnas con espacio entre ellos */
+    margin: 5px; /* Espacio entre los botones */
+    max-width: 150px; /* Ancho máximo para cada botón */
+}
+
+#root {
+    width: 80%; /* Ajusta según sea necesario */
+    margin: 20px auto; /* Centrar el contenido */
+    display: grid; /* Utilizar grid para el diseño */
+    grid-template-columns: repeat(3, 1fr); /* Tres columnas de igual tamaño */
+    grid-gap: 20px; /* Espacio entre las cartas */
+    justify-content: center; /* Centrar el contenido horizontalmente */
+}
+
+.btn-back {
+    position: absolute;
+    width: 5%;
+    top: 1rem;
+    left: 1rem;
+    padding: 0.5rem 1rem;
+    background-color: #ca0c0c;
+    color: white;
+    text-align: center;
+    border: none;
+    border-radius: 0.375rem;
+    cursor: pointer;
+    font-size: 0.875rem;
+    font-weight: 500;
+    text-decoration: none;
+}

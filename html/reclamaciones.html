@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Libro de Reclamaciones</title>
+    <link rel="stylesheet" href="/style/reclamaciones.css"> 
+</head>
+<body>
+    <div class="container">
+        <button class="btn-back" onclick="history.back()">Regresar</button>
+        <header class="header">
+            <h1>Libro de Reclamaciones</h1>
+            <p>
+                Utiliza este libro de reclamaciones para compartir tus quejas o sugerencias. Nos tomamos tus comentarios muy en serio y los usaremos para mejorar nuestros servicios.
+            </p>
+        </header>
+        <form class="form">
+            <div class="grid">
+                <div>
+                    <label for="name" class="label">Nombre</label>
+                    <input id="name" class="input" placeholder="Ingresa tu nombre">
+                </div>
+                <div>
+                    <label for="email" class="label">Correo electrónico</label>
+                    <input id="email" type="email" class="input" placeholder="Ingresa tu correo electrónico">
+                </div>
+            </div>
+            <div>
+                <label for="type" class="label">Tipo de reclamación</label>
+                <select id="type" class="select">
+                    <option value="" disabled selected>Selecciona un tipo</option>
+                    <option value="product">Producto</option>
+                    <option value="service">Servicio</option>
+                    <option value="other">Otro</option>
+                </select>
+            </div>
+            <div>
+                <label for="details" class="label">Detalles</label>
+                <textarea id="details" class="textarea" placeholder="Describe tu reclamación o sugerencia"></textarea>
+            </div>
+            <button type="submit" class="button">Enviar</button>
+        </form>
+    </div>
+    <script src="/javascript/reclamaciones.js"></script>
+</body>
+</html>

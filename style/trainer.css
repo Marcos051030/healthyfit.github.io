@@ -1,0 +1,83 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  background-color: #eaeaea;
+  font-family: Arial, sans-serif;
+  position: relative;
+}
+
+.btn-back {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  background-color: #bc1111;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.card-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* Tres columnas con igual ancho */
+  gap: 20px; /* Espacio entre las tarjetas */
+  max-width: 1200px; /* Ancho máximo para evitar que se salgan de la pantalla */
+  margin-top: 20px; /* Espacio superior para separar del botón de regresar */
+  justify-content: center; /* Centra las tarjetas horizontalmente */
+}
+
+.card {
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  text-align: left; /* Alineación del texto a la izquierda */
+}
+
+.card-header img {
+  width: 100%;
+  height: 200px; /* Altura fija para las imágenes */
+  object-fit: cover; /* Para asegurar que todas las imágenes tengan el mismo tamaño */
+  border-top-left-radius: 8px;
+  border-top-right-radius: 8px;
+}
+
+.card-body {
+  padding: 20px;
+}
+
+.card-body h2 {
+  margin-bottom: 10px;
+  font-size: 24px;
+  color: #333;
+}
+
+.card-body p {
+  margin-bottom: 8px;
+  font-size: 16px;
+  color: #666;
+}
+
+.btn-contratar {
+  background-color: #bc1111;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.btn-contratar:hover {
+  background-color: #820909;
+}

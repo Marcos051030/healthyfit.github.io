@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="/style/delivery.css">
+  <title>delivery</title>
+</head>
+<body>
+  <div class="max-w-2xl mx-auto p-6 bg-card text-card-foreground rounded-lg shadow-md">
+    <button class="bg-muted text-muted-foreground px-4 py-2 rounded-lg mb-4 flex items-center" onclick="history.back()">Volver</button>
+    <h2 class="text-2xl font-bold mb-2">Realizar Pedido - HealthyFit</h2>
+    <p class="text-muted-foreground mb-6">Completa el formulario para hacer tu pedido a domicilio.</p>
+    <form>
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+        <div>
+          <label class="block mb-1" for="nombre">Nombre</label>
+          <input class="w-full p-2 border rounded-lg" type="text" id="nombre" placeholder="Ingresa tu nombre" />
+        </div>
+        <div>
+          <label class="block mb-1" for="metodo-pago">Método de Pago</label>
+          <div class="flex items-center space-x-4">
+            <label class="flex items-center">
+              <input type="radio" name="metodo-pago" value="paypal" class="mr-2" /> PayPal
+            </label>
+            <label class="flex items-center">
+              <input type="radio" name="metodo-pago" value="tarjeta" class="mr-2" /> Tarjeta
+            </label>
+            <label class="flex items-center">
+              <input type="radio" name="metodo-pago" value="transferencia" class="mr-2" /> Transferencia
+            </label>
+          </div>
+        </div>
+        <div>
+          <label class="block mb-1" for="direccion">Dirección de Entrega</label>
+          <input class="w-full p-2 border rounded-lg" type="text" id="direccion" placeholder="Ingresa la dirección de entrega" />
+        </div>
+        <div>
+          <label class="block mb-1" for="dni">DNI</label>
+          <input class="w-full p-2 border rounded-lg" type="text" id="dni" placeholder="Ingresa tu DNI" />
+        </div>
+        <div>
+          <label class="block mb-1" for="telefono">Teléfono</label>
+          <input class="w-full p-2 border rounded-lg" type="text" id="telefono" placeholder="Ingresa tu número de teléfono" />
+        </div>
+        <div>
+          <label class="block mb-1" for="correo">Correo Electrónico</label>
+          <input class="w-full p-2 border rounded-lg" type="email" id="correo" placeholder="Ingresa tu correo electrónico" />
+        </div>
+        <div>
+          <label class="block mb-1" for="referencias">Referencias Adicionales</label>
+          <input class="w-full p-2 border rounded-lg" type="text" id="referencias" placeholder="Ingresa referencias adicionales" />
+        </div>
+        <div>
+          <label class="block mb-1" for="contrasena">Contraseña</label>
+          <input class="w-full p-2 border rounded-lg" type="password" id="contrasena" placeholder="Ingresa tu contraseña" />
+        </div>
+      </div>
+      <button class="bg-primary text-primary-foreground hover:bg-primary/80 px-4 py-2 rounded-lg mt-6">Enviar Pedido</button>
+    </form>
+  </div>
+  <script src="/javascript/delivery.js"></script>
+</body>
+</html>

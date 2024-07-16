@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Healthyfit</title>
+
+  <link rel="shortcut icon" href="./images/favicon.ico" type="image/x-icon">
+  <link rel="icon" type="image/png" sizes="48x48" href="/images/fitnezz_favicon.png">
+  <link rel="icon" type="image/png" sizes="96x96" href="/images/fitnezz_favicon.png">
+  <link rel="icon" type="image/png" sizes="144x144" href="/images/fitnezz_favicon.png">
+  <link rel="icon" type="image/png" sizes="192x192" href="/images/fitnezz_favicon.png">
+  <link rel="icon" type="image/png" sizes="256x256" href="/images/fitnezz_favicon.png">
+  <link rel="icon" type="image/png" sizes="384x384" href="/images/fitnezz_favicon.png">
+  <link rel="icon" type="image/png" sizes="512x512" href="/images/fitnezz_favicon.png">
+  <link rel="stylesheet" href="/style/home.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <script src="https://kit.fontawesome.com/b70d731558.js" crossorigin="anonymous"></script>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <script src="https://use.fontawesome.com/d416e09bd8.js"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins&family=Roboto&display=swap" rel="stylesheet">
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+  <link rel="stylesheet" href="/style/rutina.css">
+</head>
+
+<body onload="myfunction()">
+  <div id="load"></div>
+  
+      <i class="fa fa-arrow-circle-up" aria-hidden="true" id="upbtn"></i>
+  
+  <!-- <body> -->
+  <header class="header">
+    <a href="/html/index.html" style="text-decoration:none; color: inherit;">
+      <div class="logo"><i class="fa-solid fa-dumbbell"></i> Healthy<span style="color: #bd3636">fit</span></div>
+    </a>
+    <a href="#" class="toggle-button">
+      <span class="bar"></span>
+      <span class="bar"></span>
+      <span class="bar"></span>
+    </a>
+    <div class="navbar">
+      <ul>
+        <li><a href="/html/couch.html">Entrenadores</a></li>
+        <li><a href="/html/tienda.html">Tienda</a></li>
+        <li><a href="/html/reclamaciones.html">Libro de reclamaciones</a></li>
+      </ul>
+    </div>
+
+
+      <div class="button">
+        <button class="btn2 grow" onclick="history.back()">Regresar</button>
+      </div>
+
+  </header>
+
+
+ <br><br>
+  <div class="container">
+  
+    <div id="selection-box">
+        <!-- Primera selección: Hombre o Mujer -->
+        <div id="gender-selection">
+            <h2>Selecciona tu género</h2>
+            <button class="selection-btn" onclick="selectGender('hombre')">
+                <img src="/images/hombre _entrenando.jpg" alt="Hombre">
+                <span>Hombre</span>
+            </button>
+            <button class="selection-btn" onclick="selectGender('mujer')">
+                <img src="/images/mujer_entrenando.jpg" alt="Mujer">
+                <span>Mujer</span>
+            </button>
+        </div>
+        <!-- Segunda selección: Nivel -->
+        <div id="level-selection" style="display:none;">
+            <h2>Selecciona tu nivel</h2>
+            <button class="selection-btn" onclick="selectLevel('principiante')">Principiante</button>
+            <button class="selection-btn" onclick="selectLevel('intermedio')">Intermedio</button>
+            <button class="selection-btn" onclick="selectLevel('avanzado')">Avanzado</button>
+        </div>
+        <!-- Tercera selección: Parte del cuerpo -->
+        <div id="focus-selection" style="display:none;">
+            <h2>Selecciona la parte del cuerpo</h2>
+            <button class="selection-btn" onclick="selectFocus('superior')">Cuerpo Superior</button>
+            <button class="selection-btn" onclick="selectFocus('inferior')">Cuerpo Inferior</button>
+            <button class="selection-btn" onclick="selectFocus('fullbody')">Cuerpo Completo</button>
+        </div>
+        <!-- Cuarta selección: Tipo de ejercicios -->
+        <div id="type-selection" style="display:none;">
+            <h2>Selecciona el tipo de ejercicios</h2>
+            <button class="selection-btn" onclick="selectType('casa')">Casa</button>
+            <button class="selection-btn" onclick="selectType('gimnasio')">Gimnasio</button>
+        </div>
+        <!-- Resultado: Rutina -->
+        <div id="routine-display" style="display:none;">
+            <h2>Tu Rutina Personalizada</h2>
+            <div id="routine-content"></div>
+        </div>
+    </div>
+</div>
+<script src="/javascript/scripts_rutina.js"></script>
+
+  <footer class="footer">
+    <div class="container-footer">
+      <div class="row">
+        <div class="footer-col one">
+          <img src="/images/Captura.PNG" alt="Logo" style="margin-left: 200px;">
+          <strong><p style="text-align:left ;">Tu momento es ahora...</p></strong>
+          <div class="socials" style="padding-bottom:10px;">
+  	 				<a href="#"><i class="fb fa fa-facebook-f"></i></a>
+  	 				<a href="#"><i class="twit fa fa-twitter"></i></a>
+  	 				<a href="#"><i class="fa fa-instagram"></i></a>
+  	 				<a href="#"><i class="linkd fa fa-linkedin"></i></a>
+  	 			</div>
+  	 		</div>
+
+         <div class="footer-col schedule">
+          <h4 class="timing" style="text-align:left ;"><i class="fa-solid fa-calendar-days"></i> mon - wed</h4>
+          <p style="text-align:left ;"><span class="num">8</span>AM - <span class="num">4</span>PM</p>
+          <br>
+          <h4 class="timing" style="text-align:left ;"><i class="fa-solid fa-calendar-days"></i> thu - sat</h4>
+          <p style="text-align:left ;"><span class="num">10</span>AM - <span class="num">6</span>PM</p>
+        </div>
+       <div class="footer-col">
+         <strong><h4>Programas</h4></strong>
+         <ul>
+           <li style="text-align:left ;"><a href="/html/Rutinas.html">Rutina</a><hr noshade="noshade"/></li>
+           <li style="text-align:left ;"><a href="/html/couch.html">Entrenadores</a><hr noshade="noshade"/></li>
+         </ul>
+       </div>
+       <div class="footer-col">
+         <strong><h4 style="text-align:left ;">HealthyFit</h4></strong>
+         <ul>
+           <li style="text-align:left ;"><a href="#header">Inicio</a><hr noshade="noshade"/></li>
+           <li style="text-align:left ;"><a href="#featureclass">Niveles de entrenamiento</a><hr noshade="noshade"/></li>
+           <li style="text-align:left ;"><a href="#pricing">Precios</a><hr noshade="noshade"/></li>
+         </ul>
+       </div>
+       
+     </div>
+        
+      </div>
+      <!-- <div class="footer-bottom">
+        <div class="left-corner" style="text-align:center;"> -->
+          <div class="copyright">
+              <p>Copyright &copy; <span><a href="#" target="_blank"> Healthyfit</a></span> | All Rights Reserved</p>
+          </div>
+        <!-- </div> -->
+        <!-- <div class="right-corner">
+          <p><b>Terms of use </b></p>
+          <p><b>Careers</b></p>
+          <p><b>Privacy Policy</b></p>
+        </div> -->
+      </div>
+    </div>
+  </footer>
+  <script>
+    var preloader = document.getElementById('load');
+    const upBtn = document.getElementById('upbtn')
+
+    function myfunction(){
+        preloader.style.display='none';
+    }
+  </script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+  <script src="rutinas.js"></script>
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script>
+    AOS.init();
+  </script>
+</body>
+<script>
+  window.addEventListener('mouseover', initLandbot, { once: true });
+  window.addEventListener('touchstart', initLandbot, { once: true });
+  var myLandbot;
+  function initLandbot() {
+    if (!myLandbot) {
+      var s = document.createElement('script');s.type = 'text/javascript';s.async = true;
+      s.addEventListener('load', function() {
+        var myLandbot = new Landbot.Livechat({
+          configUrl: 'https://storage.googleapis.com/landbot.online/v3/H-2533585-RAI4XGXU4DXWNXFE/index.json',
+        });
+      });
+      s.src = 'https://cdn.landbot.io/landbot-3/landbot-3.0.0.js';
+      var x = document.getElementsByTagName('script')[0];
+      x.parentNode.insertBefore(s, x);
+    }
+  }
+  </script>
+</html>

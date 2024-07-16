@@ -1,0 +1,40 @@
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>tienda</title>
+        <link rel="stylesheet" href="/style/tienda.css">
+        <script src="https://kit.fontawesome.com/92d70a2fd8.js" crossorigin="anonymous"></script>
+    </head>
+    <body>
+        <div class="header">
+            <p class="logo">Healthy - Fit</p>
+            <button class="btn-back" onclick="history.back()">Volver</button>
+            <div class="cart"><i class="fa-solid fa-cart-shopping"></i><p id="count">0</p></div>    
+        </div>
+        <div class="container">
+            <div id="sidebar">
+                <input type="text" id="searchInput" placeholder="Buscar productos..." oninput="buscarProductos()" />
+                <button onclick="changeCategory('polos')">Ropa</button>
+                <button onclick="changeCategory('calzados')">Calzados</button>
+                <button onclick="changeCategory('herramientas')">Herramientas</button>
+                <button onclick="changeCategory('destacados')">Destacados</button>
+                <div id="root"></div>
+            </div>
+            <div class="sidebar">
+                <div class="head"><p>Mi Carrito</p></div>
+                <div id="cartItem">Tu carrito está vacío.</div>
+                <div class="foot">
+                    <h3>Total</h3>
+                    <h2 id="total">S/. 0.00</h2>
+                    <button id="buyBtn" onclick="buyItems()">Comprar</button>
+                    <a href="/html/delivery.html"><button id="orderbtn">Pedir</button></a>
+
+                </div>
+            </div>
+        </div>
+        
+        <script src="/javascript/tienda.js"></script>
+    </body>
+    </html>
